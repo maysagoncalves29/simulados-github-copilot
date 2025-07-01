@@ -2356,8 +2356,3 @@ const questionsDatabase = [
         correct: 1
     }
 ];
-
-// Export for use in quiz application
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = questionsDatabase;
-}

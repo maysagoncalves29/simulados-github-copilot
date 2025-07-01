@@ -75,7 +75,14 @@ class GitHubCopilotQuiz {
     }
 
     startQuiz() {
-        this.selectRandomQuestions();
+        // Captura domínios selecionados
+        const checkedBoxes = document.querySelectorAll('.domain-checkbox:checked');
+        const selectedDomains = Array.from(checkedBoxes).map(cb => cb.value);
+        this.selectRandomQuestions(selectedDomains);
+        if (!this.selectedQuestions.length) {
+            alert('Não há questões disponíveis para os domínios selecionados. Por favor, escolha outros domínios.');
+            return;
+        }
         this.userAnswers = new Array(60).fill(null);
         this.currentQuestionIndex = 0;
         this.isQuizActive = true;
@@ -87,13 +94,20 @@ class GitHubCopilotQuiz {
         this.updateProgressBar();
     }
 
-    selectRandomQuestions() {
-        // Shuffle all questions and select 60 random ones
-        const shuffled = [...this.allQuestions].sort(() => 0.5 - Math.random());
+    selectRandomQuestions(selectedDomains = []) {
+        let pool;
+        if (selectedDomains && selectedDomains.length > 0) {
+            pool = this.allQuestions.filter(q => selectedDomains.includes(q.domain));
+        } else {
+            pool = [...this.allQuestions];
+        }
+        // Shuffle and select 60
+        const shuffled = pool.sort(() => 0.5 - Math.random());
         this.selectedQuestions = shuffled.slice(0, 60);
-        
-        // Ensure we have good distribution across domains
-        this.ensureDomainDistribution();
+        // Se todos os domínios, garantir distribuição
+        if (!selectedDomains || selectedDomains.length === 0) {
+            this.ensureDomainDistribution();
+        }
     }
 
     ensureDomainDistribution() {
@@ -108,15 +122,25 @@ class GitHubCopilotQuiz {
             "Domínio 7: Fundamentos de privacidade e exclusões de contexto": 10
         };
 
-        // Count current distribution
-        this.selectedQuestions.forEach(q => {
-            domainCounts[q.domain] = (domainCounts[q.domain] || 0) + 1;
+        // Agrupa as questões por domínio
+        const questionsByDomain = {};
+        this.allQuestions.forEach(q => {
+            if (!questionsByDomain[q.domain]) questionsByDomain[q.domain] = [];
+            questionsByDomain[q.domain].push(q);
         });
 
-        // Adjust if necessary (simplified approach)
-        if (this.selectedQuestions.length !== 60) {
-            this.selectedQuestions = this.selectedQuestions.slice(0, 60);
-        }
+        // Seleciona a quantidade exata de cada domínio
+        let selected = [];
+        Object.keys(targetDistribution).forEach(domain => {
+            const domainQuestions = questionsByDomain[domain] || [];
+            // Embaralha as questões do domínio
+            const shuffled = domainQuestions.sort(() => 0.5 - Math.random());
+            // Seleciona a quantidade necessária (ou o máximo disponível)
+            selected = selected.concat(shuffled.slice(0, targetDistribution[domain]));
+        });
+
+        // Embaralha o conjunto final
+        this.selectedQuestions = selected.sort(() => 0.5 - Math.random());
     }
 
     displayCurrentQuestion() {
@@ -258,8 +282,7 @@ class GitHubCopilotQuiz {
             correctAnswers,
             totalQuestions: this.selectedQuestions.length,
             percentage: Math.round((correctAnswers / this.selectedQuestions.length) * 100),
-            passed: correctAnswers >= 39, // 65% of 60 questions
-            duration: this.calculateDuration()
+            passed: correctAnswers >= 42,            duration: this.calculateDuration()
         };
     }
 
@@ -311,7 +334,7 @@ class GitHubCopilotQuiz {
                 </div>
                 <div class="score-item">
                     <span>Nota mínima:</span>
-                    <span>65%</span>
+                    <span>70%</span>
                 </div>
                 <div class="score-item">
                     <span>Tempo gasto:</span>

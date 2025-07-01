@@ -9,7 +9,7 @@ Uma aplicação web completa para simulados de preparação para a certificaçã
 - **180 questões** cobrindo todos os 7 domínios da certificação GH-300
 - **60 questões aleatórias** por simulado para máxima variedade  
 - **Interface responsiva** e intuitiva
-- **Critério de aprovação**: 65% (39 de 60 questões corretas)
+- **Critério de aprovação**: 70% (39 de 60 questões corretas)
 - **Revisão detalhada** das respostas após o simulado
 - **Sem frameworks**: HTML, CSS e JavaScript puro
 - **Suporte a teclado**: teclas 1-5 para selecionar alternativas, setas para navegar
