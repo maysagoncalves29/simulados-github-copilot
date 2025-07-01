@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado GitHub Copilot - GH-300</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulado GitHub Copilot</h1>
+            <p class="subtitle">Preparação para Certificação GH-300</p>
+        </header>
+
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h2>Bem-vindo ao Simulado</h2>
+                <div class="info-box">
+                    <h3>Informações do Simulado:</h3>
+                    <ul>
+                        <li>📝 60 questões selecionadas aleatoriamente</li>
+                        <li>⏱️ Sem limite de tempo</li>
+                        <li>✅ 5 alternativas por questão</li>
+                        <li>🎯 65% de acerto para aprovação (39 questões)</li>
+                        <li>📚 Baseado no guia de estudo GH-300</li>
+                    </ul>
+                </div>
+                <button id="start-quiz" class="btn btn-primary">Iniciar Simulado</button>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="question-counter">Questão 1 de 60</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="domain-tag" id="domain-tag">Domínio 1: IA Responsável</div>
+                <div class="question-text" id="question-text">
+                    Carregando questão...
+                </div>
+                
+                <div class="alternatives" id="alternatives">
+                    <!-- Alternatives will be populated by JavaScript -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="prev-question" class="btn btn-secondary" disabled>Anterior</button>
+                    <button id="next-question" class="btn btn-primary" disabled>Próxima</button>
+                    <button id="finish-quiz" class="btn btn-success" style="display: none;">Finalizar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <div id="results-content">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+                <div class="results-actions">
+                    <button id="try-again" class="btn btn-primary">Tentar Novamente</button>
+                    <button id="review-answers" class="btn btn-secondary">Revisar Respostas</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="review-screen" class="screen">
+            <div class="review-container">
+                <h2>Revisão das Respostas</h2>
+                <div id="review-content">
+                    <!-- Review content will be populated by JavaScript -->
+                </div>
+                <button id="back-to-results" class="btn btn-secondary">Voltar aos Resultados</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
