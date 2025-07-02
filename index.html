@@ -22,9 +22,16 @@
                         <li>📝 60 questões selecionadas aleatoriamente</li>
                         <li>⏱️ Sem limite de tempo</li>
                         <li>✅ 5 alternativas por questão</li>
-                        <li>🎯 70% de acerto para aprovação (42 questões)</li>
+                        <li>🎯 80% de acerto para aprovação (48 questões)</li>
                         <li>📚 Baseado no guia de estudo GH-300</li>
                     </ul>
+                </div>
+                <div class="mode-select-box">
+                    <h3>Escolha o modo do simulado:</h3>
+                    <div class="mode-radio-buttons">
+                        <label><input type="radio" name="quiz-mode" value="practice" checked> <strong>Modo Prática</strong> - Ver respostas imediatamente ao errar</label><br>
+                        <label><input type="radio" name="quiz-mode" value="exam"> <strong>Modo Exame</strong> - Ver respostas apenas no final</label>
+                    </div>
                 </div>
                 <div class="domain-select-box">
                     <h3>Escolha os domínios para treinar (opcional):</h3>
@@ -61,6 +68,10 @@
                 
                 <div class="alternatives" id="alternatives">
                     <!-- Alternatives will be populated by JavaScript -->
+                </div>
+
+                <div class="feedback-area" id="feedback-area" style="display: none;">
+                    <!-- Immediate feedback will be shown here in practice mode -->
                 </div>
 
                 <div class="quiz-controls">

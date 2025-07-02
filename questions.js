@@ -2354,5 +2354,1322 @@ const questionsDatabase = [
             "Exclusivamente auto-aprendizado"
         ],
         correct: 1
+    },
+
+    // Sample questions with multiple correct answers (some questions have 2 correct alternatives)
+    {
+        id: 181,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Quais são características do GitHub Copilot Business? (Selecione as opções corretas)",
+        alternatives: [
+            "Exclusões de dados organizacionais",
+            "Apenas suporte via chat",
+            "Logs de auditoria organizacionais",
+            "Preço mais barato que Individual",
+            "Funciona apenas em VS Code"
+        ],
+        correct: [0, 2] // Multiple correct answers: exclusões de dados e logs de auditoria
+    },
+    {
+        id: 182,
+        domain: "Domínio 1: IA Responsável",
+        question: "Quais são princípios fundamentais da IA responsável? (Selecione as opções corretas)",
+        alternatives: [
+            "Transparência nas decisões",
+            "Maximizar lucros a qualquer custo",
+            "Equidade e não discriminação",
+            "Velocidade sobre precisão",
+            "Evitar qualquer supervisão humana"
+        ],
+        correct: [0, 2] // Transparência e equidade
+    },
+    {
+        id: 183,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Que tipos de dados o GitHub Copilot considera para gerar sugestões?",
+        alternatives: [
+            "Contexto do código atual",
+            "Apenas código público no GitHub",
+            "Comentários e nomes de variáveis",
+            "Exclusivamente dados de performance",
+            "Somente dados de usuários pagos"
+        ],
+        correct: [0, 2] // Contexto do código e comentários/nomes de variáveis
+    },
+    {
+        id: 184,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Qual é a melhor estratégia para criar prompts eficazes no GitHub Copilot?",
+        alternatives: [
+            "Usar comentários descritivos e específicos",
+            "Apenas escrever código sem contexto",
+            "Fornecer exemplos relevantes no código",
+            "Evitar qualquer documentação",
+            "Usar apenas palavras-chave técnicas"
+        ],
+        correct: [0, 2] // Comentários descritivos e exemplos relevantes
+    },
+    {
+        id: 185,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o GitHub Copilot pode melhorar a produtividade em desenvolvimento?",
+        alternatives: [
+            "Automatizando tarefas repetitivas",
+            "Substituindo completamente o desenvolvedor",
+            "Acelerando a escrita de código boilerplate",
+            "Eliminando a necessidade de testes",
+            "Removendo a necessidade de documentação"
+        ],
+        correct: [0, 2] // Automatização e código boilerplate
+    },
+    {
+        id: 186,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Que tipos de testes o GitHub Copilot pode ajudar a gerar?",
+        alternatives: [
+            "Testes unitários",
+            "Apenas testes manuais",
+            "Testes de integração",
+            "Exclusivamente testes de UI",
+            "Somente testes de performance"
+        ],
+        correct: [0, 2] // Testes unitários e de integração
+    },
+    {
+        id: 187,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são opções de configuração de privacidade no GitHub Copilot?",
+        alternatives: [
+            "Exclusões de arquivos específicos",
+            "Compartilhamento obrigatório de todo código",
+            "Configurações de organização",
+            "Bloqueio total sem configuração",
+            "Apenas configurações globais"
+        ],
+        correct: [0, 2] // Exclusões de arquivos e configurações de organização
+    },
+
+    // Additional questions to reach ~280 total
+    // Domain 1: IA Responsável - adding 6 more questions
+    {
+        id: 188,
+        domain: "Domínio 1: IA Responsável",
+        question: "Qual é o papel da auditoria em sistemas de IA responsável?",
+        alternatives: [
+            "Apenas verificar custos operacionais",
+            "Monitorar performance e identificar vieses em resultados",
+            "Somente documentar processos",
+            "Apenas validar código fonte",
+            "Exclusivamente medir velocidade"
+        ],
+        correct: 1
+    },
+    {
+        id: 189,
+        domain: "Domínio 1: IA Responsável",
+        question: "Como garantir a explicabilidade de decisões tomadas por IA?",
+        alternatives: [
+            "Ocultar o processo decisório",
+            "Documentar apenas resultados finais",
+            "Fornecer rastreabilidade e justificativas compreensíveis para as decisões",
+            "Usar apenas modelos complexos",
+            "Evitar qualquer documentação"
+        ],
+        correct: 2
+    },
+    {
+        id: 190,
+        domain: "Domínio 1: IA Responsável",
+        question: "Quais são os desafios éticos no uso de IA em desenvolvimento de software?",
+        alternatives: [
+            "Apenas questões técnicas",
+            "Viés algorítmico, privacidade de dados e impacto social",
+            "Somente custos financeiros",
+            "Apenas compatibilidade de sistemas",
+            "Exclusivamente performance"
+        ],
+        correct: 1
+    },
+    {
+        id: 191,
+        domain: "Domínio 1: IA Responsável",
+        question: "Como mitigar riscos de discriminação em sistemas de IA?",
+        alternatives: [
+            "Ignorar dados demográficos",
+            "Usar apenas algoritmos simples",
+            "Testar com dados diversos e monitorar resultados para diferentes grupos",
+            "Evitar qualquer tipo de teste",
+            "Usar apenas dados históricos"
+        ],
+        correct: 2
+    },
+    {
+        id: 192,
+        domain: "Domínio 1: IA Responsável",
+        question: "Qual é a importância da diversidade em equipes que desenvolvem IA?",
+        alternatives: [
+            "Não tem importância",
+            "Apenas para questões legais",
+            "Reduz vieses e aumenta perspectivas na tomada de decisões",
+            "Somente para marketing",
+            "Apenas para reduzir custos"
+        ],
+        correct: 2
+    },
+    {
+        id: 193,
+        domain: "Domínio 1: IA Responsável",
+        question: "Como estabelecer governança adequada para IA em organizações?",
+        alternatives: [
+            "Evitar qualquer estrutura",
+            "Apenas documentar processos",
+            "Criar políticas claras, comitês de supervisão e processos de revisão",
+            "Deixar tudo para desenvolvedores",
+            "Usar apenas ferramentas automatizadas"
+        ],
+        correct: 2
+    },
+
+    // Domain 2: Planos e recursos do GitHub Copilot - adding 13 more questions
+    {
+        id: 194,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Qual é a diferença principal entre Copilot Individual e Enterprise em termos de dados?",
+        alternatives: [
+            "Individual não usa dados",
+            "Enterprise oferece maior controle sobre dados e possibilita bases de conhecimento customizadas",
+            "Não há diferença",
+            "Individual é mais seguro",
+            "Enterprise usa apenas dados públicos"
+        ],
+        correct: 1
+    },
+    {
+        id: 195,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como funciona a indexação de Bases de Conhecimento no Copilot Enterprise?",
+        alternatives: [
+            "Indexação manual apenas",
+            "Apenas arquivos de código",
+            "Indexação automática de repositórios selecionados incluindo código e documentação",
+            "Somente dados públicos",
+            "Apenas metadados"
+        ],
+        correct: 2
+    },
+    {
+        id: 196,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Quais métricas estão disponíveis nos logs de auditoria do Copilot Business?",
+        alternatives: [
+            "Apenas número de usuários",
+            "Uso por usuário, aceitação de sugestões, e atividade por repositório",
+            "Somente erros do sistema",
+            "Apenas dados financeiros",
+            "Exclusivamente logs de performance"
+        ],
+        correct: 1
+    },
+    {
+        id: 197,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como configurar políticas de uso do Copilot em nível organizacional?",
+        alternatives: [
+            "Não é possível configurar",
+            "Apenas individualmente",
+            "Através das configurações da organização no GitHub com políticas de bloqueio/permissão",
+            "Somente via API",
+            "Apenas por ticket de suporte"
+        ],
+        correct: 2
+    },
+    {
+        id: 198,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Qual comando do GitHub CLI permite sugerir comandos shell?",
+        alternatives: [
+            "gh copilot suggest",
+            "gh copilot shell",
+            "gh copilot cmd",
+            "gh copilot terminal",
+            "gh copilot bash"
+        ],
+        correct: 0
+    },
+    {
+        id: 199,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como funciona a indenização de propriedade intelectual no Copilot Business?",
+        alternatives: [
+            "Não oferece proteção",
+            "Apenas para código público",
+            "GitHub oferece proteção legal contra reivindicações de IP para clientes Business",
+            "Somente para empresas grandes",
+            "Apenas para código original"
+        ],
+        correct: 2
+    },
+    {
+        id: 200,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Quais são os requisitos para usar Copilot Enterprise?",
+        alternatives: [
+            "Qualquer conta GitHub",
+            "Apenas GitHub Pro",
+            "GitHub Enterprise Cloud com repositórios da organização",
+            "Somente contas pagas",
+            "Apenas para desenvolvedores certificados"
+        ],
+        correct: 2
+    },
+    {
+        id: 201,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como personalizar o comportamento do Copilot Chat para projetos específicos?",
+        alternatives: [
+            "Não é possível personalizar",
+            "Apenas mudando configurações globais",
+            "Usando arquivos de configuração específicos do projeto e contexto do repositório",
+            "Somente via API",
+            "Apenas para administradores"
+        ],
+        correct: 2
+    },
+    {
+        id: 202,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Qual é o limite de caracteres para prompts no Copilot Chat?",
+        alternatives: [
+            "500 caracteres",
+            "1000 caracteres",
+            "Varia dependendo do contexto, mas geralmente alguns milhares de caracteres",
+            "Sem limite",
+            "100 caracteres apenas"
+        ],
+        correct: 2
+    },
+    {
+        id: 203,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como funciona o recurso de resumos de Pull Request no Copilot?",
+        alternatives: [
+            "Apenas conta linhas modificadas",
+            "Somente lista arquivos alterados",
+            "Analisa as mudanças e gera resumos descritivos automáticos do que foi alterado",
+            "Apenas copia descrições existentes",
+            "Somente funciona com PRs pequenos"
+        ],
+        correct: 2
+    },
+    {
+        id: 204,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Quais IDEs suportam oficialmente o GitHub Copilot?",
+        alternatives: [
+            "Apenas VS Code",
+            "VS Code, Visual Studio, IntelliJ, Neovim e outros editores JetBrains",
+            "Somente IDEs da Microsoft",
+            "Apenas editores web",
+            "Somente IDEs pagos"
+        ],
+        correct: 1
+    },
+    {
+        id: 205,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Como gerenciar licenças do Copilot Business via API REST?",
+        alternatives: [
+            "Não é possível via API",
+            "Apenas listagem de usuários",
+            "Endpoints para adicionar/remover usuários e gerenciar configurações organizacionais",
+            "Somente consulta de dados",
+            "Apenas para administradores de sistema"
+        ],
+        correct: 2
+    },
+    {
+        id: 206,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Qual é o benefício dos modelos personalizados no Copilot Enterprise?",
+        alternatives: [
+            "Apenas redução de custos",
+            "Somente mais velocidade",
+            "Sugestões mais contextualizadas para padrões específicos da organização",
+            "Apenas interface diferente",
+            "Somente para grandes volumes"
+        ],
+        correct: 2
+    },
+
+    // Domain 3: Como o GitHub Copilot funciona e lida com dados - adding 12 more questions  
+    {
+        id: 207,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o GitHub Copilot processa comentários no código para gerar sugestões?",
+        alternatives: [
+            "Ignora todos os comentários",
+            "Analisa comentários como parte do contexto para entender a intenção do código",
+            "Apenas copia comentários",
+            "Somente usa comentários em inglês",
+            "Remove comentários automaticamente"
+        ],
+        correct: 1
+    },
+    {
+        id: 208,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Qual é o papel do servidor proxy no pipeline do Copilot?",
+        alternatives: [
+            "Apenas acelerar conexões",
+            "Aplicar filtros de segurança e políticas antes de enviar prompts ao modelo",
+            "Somente armazenar cache",
+            "Apenas rotear requisições",
+            "Exclusivamente monitorar performance"
+        ],
+        correct: 1
+    },
+    {
+        id: 209,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o GitHub Copilot identifica código duplicado ou semelhante?",
+        alternatives: [
+            "Comparação simples de strings",
+            "Não identifica duplicações",
+            "Análise semântica e comparação com padrões conhecidos nos dados de treinamento",
+            "Apenas por hash MD5",
+            "Somente por número de linhas"
+        ],
+        correct: 2
+    },
+    {
+        id: 210,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Qual é a limitação da janela de contexto nos LLMs?",
+        alternatives: [
+            "Não há limitações",
+            "Quantidade limitada de tokens que podem ser processados simultaneamente",
+            "Apenas velocidade de processamento",
+            "Somente uso de memória",
+            "Apenas compatibilidade de linguagens"
+        ],
+        correct: 1
+    },
+    {
+        id: 211,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o Copilot determina a relevância do contexto do arquivo atual?",
+        alternatives: [
+            "Apenas pelo nome do arquivo",
+            "Análise da linguagem, imports, estrutura do código e proximidade do cursor",
+            "Somente pelo tamanho do arquivo",
+            "Apenas por metadados",
+            "Exclusivamente por data de modificação"
+        ],
+        correct: 1
+    },
+    {
+        id: 212,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Quais dados do repositório influenciam as sugestões do Copilot?",
+        alternatives: [
+            "Apenas o arquivo atual",
+            "Arquivos relacionados, estrutura do projeto, dependências e padrões de código",
+            "Somente arquivos abertos",
+            "Apenas arquivos modificados recentemente",
+            "Exclusivamente arquivos de configuração"
+        ],
+        correct: 1
+    },
+    {
+        id: 213,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o pós-processamento funciona nas respostas do Copilot?",
+        alternatives: [
+            "Não há pós-processamento",
+            "Apenas formatação básica",
+            "Filtros de segurança, validação de sintaxe e ajustes de contexto",
+            "Somente verificação de tamanho",
+            "Apenas tradução de idiomas"
+        ],
+        correct: 2
+    },
+    {
+        id: 214,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Qual é o impacto da idade dos dados de treinamento nas sugestões?",
+        alternatives: [
+            "Não tem impacto",
+            "Dados mais antigos podem não refletir práticas e tecnologias atuais",
+            "Apenas afeta velocidade",
+            "Somente influencia formatação",
+            "Exclusivamente altera linguagens suportadas"
+        ],
+        correct: 1
+    },
+    {
+        id: 215,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o Copilot Chat mantém contexto durante uma conversa?",
+        alternatives: [
+            "Não mantém contexto",
+            "Apenas lembra a última mensagem",
+            "Histórico da conversa é incluído no prompt para manter coerência",
+            "Somente salva em cache local",
+            "Apenas para conversas curtas"
+        ],
+        correct: 2
+    },
+    {
+        id: 216,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Quais são os tipos de processamento de entrada para o Copilot Chat?",
+        alternatives: [
+            "Apenas texto simples",
+            "Perguntas sobre código, explicações, geração de testes e refatoração",
+            "Somente comandos predefinidos",
+            "Apenas análise de bugs",
+            "Exclusivamente tradução de código"
+        ],
+        correct: 1
+    },
+    {
+        id: 217,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Como o GitHub Copilot lida com diferentes linguagens de programação?",
+        alternatives: [
+            "Suporta apenas JavaScript",
+            "Modelos específicos para cada linguagem com diferentes níveis de suporte",
+            "Traduz tudo para uma linguagem base",
+            "Apenas linguagens compiladas",
+            "Somente linguagens de script"
+        ],
+        correct: 1
+    },
+    {
+        id: 218,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Qual é a diferença entre dados usados no Individual vs Business?",
+        alternatives: [
+            "Não há diferença",
+            "Business permite exclusões organizacionais e maior controle sobre dados",
+            "Individual usa mais dados",
+            "Business usa apenas dados públicos",
+            "Individual é mais restritivo"
+        ],
+        correct: 1
+    },
+
+    // Domain 4: Elaboração de Prompts e Engenharia de Prompts - adding 8 more questions
+    {
+        id: 219,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Qual é a diferença entre prompts zero-shot e few-shot?",
+        alternatives: [
+            "Não há diferença",
+            "Zero-shot não fornece exemplos, few-shot inclui exemplos no prompt",
+            "Zero-shot é mais rápido",
+            "Few-shot usa menos memória",
+            "Zero-shot é mais preciso"
+        ],
+        correct: 1
+    },
+    {
+        id: 220,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Como estruturar um prompt eficaz para geração de código?",
+        alternatives: [
+            "Apenas escrever a funcionalidade desejada",
+            "Contexto claro, exemplo de entrada/saída, e especificações técnicas",
+            "Somente palavras-chave",
+            "Apenas comentários vagos",
+            "Exclusivamente código existente"
+        ],
+        correct: 1
+    },
+    {
+        id: 221,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Qual é o papel das instruções de sistema em prompts?",
+        alternatives: [
+            "Não têm papel importante",
+            "Apenas formatação",
+            "Definem comportamento global e estilo de resposta do modelo",
+            "Somente para debug",
+            "Apenas para performance"
+        ],
+        correct: 2
+    },
+    {
+        id: 222,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Como melhorar a precisão de prompts para documentação de código?",
+        alternatives: [
+            "Usar apenas palavras técnicas",
+            "Especificar audiência-alvo, nível de detalhe e formato desejado",
+            "Apenas copiar código",
+            "Somente usar templates",
+            "Exclusivamente exemplos genéricos"
+        ],
+        correct: 1
+    },
+    {
+        id: 223,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Qual é a importância do contexto em prompts para o Copilot?",
+        alternatives: [
+            "Contexto não é importante",
+            "Apenas para acelerar respostas",
+            "Fundamental para gerar sugestões relevantes e precisas",
+            "Somente para formatação",
+            "Apenas para compatibilidade"
+        ],
+        correct: 2
+    },
+    {
+        id: 224,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Como usar chain-of-thought reasoning em prompts?",
+        alternatives: [
+            "Apenas fazer perguntas diretas",
+            "Quebrar problemas complexos em etapas lógicas sequenciais",
+            "Somente usar exemplos simples",
+            "Apenas repetir a pergunta",
+            "Exclusivamente usar palavras-chave"
+        ],
+        correct: 1
+    },
+    {
+        id: 225,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Quais são as melhores práticas para prompt engineering?",
+        alternatives: [
+            "Apenas ser breve",
+            "Clareza, especificidade, exemplos relevantes e iteração baseada em resultados",
+            "Somente usar linguagem técnica",
+            "Apenas copiar prompts existentes",
+            "Exclusivamente usar templates"
+        ],
+        correct: 1
+    },
+    {
+        id: 226,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Como validar a eficácia de um prompt?",
+        alternatives: [
+            "Apenas usar uma vez",
+            "Testar com diferentes entradas e avaliar qualidade das respostas",
+            "Somente medir velocidade",
+            "Apenas contar caracteres",
+            "Exclusivamente usar feedback automático"
+        ],
+        correct: 1
+    },
+
+    // Domain 5: Casos de uso de IA para desenvolvedores - adding 14 more questions
+    {
+        id: 227,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode auxiliar na migração de sistemas legados?",
+        alternatives: [
+            "Apenas documentando código antigo",
+            "Sugerindo refatorações, modernização de sintaxe e padrões atuais",
+            "Somente copiando código",
+            "Apenas identificando bugs",
+            "Exclusivamente criando testes"
+        ],
+        correct: 1
+    },
+    {
+        id: 228,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é o papel do Copilot na criação de APIs?",
+        alternatives: [
+            "Apenas documentação",
+            "Geração de endpoints, validações, e padrões REST/GraphQL",
+            "Somente testes de API",
+            "Apenas configuração de servidor",
+            "Exclusivamente monitoramento"
+        ],
+        correct: 1
+    },
+    {
+        id: 229,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode melhorar o desenvolvimento mobile?",
+        alternatives: [
+            "Apenas para aplicações web",
+            "Sugestões para componentes nativos, layouts responsivos e integração de APIs",
+            "Somente para Android",
+            "Apenas para iOS",
+            "Exclusivamente para híbridos"
+        ],
+        correct: 1
+    },
+    {
+        id: 230,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é a utilidade do Copilot para aprendizado de novas tecnologias?",
+        alternatives: [
+            "Não ajuda no aprendizado",
+            "Fornece exemplos práticos, explicações e padrões de uso",
+            "Apenas traduz documentação",
+            "Somente para tecnologias antigas",
+            "Exclusivamente para linguagens populares"
+        ],
+        correct: 1
+    },
+    {
+        id: 231,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode auxiliar em arquitetura de software?",
+        alternatives: [
+            "Apenas criando diagramas",
+            "Sugerindo padrões de design, estruturas de projeto e melhores práticas",
+            "Somente nomenclatura",
+            "Apenas documentação",
+            "Exclusivamente refatoração"
+        ],
+        correct: 1
+    },
+    {
+        id: 232,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é o benefício do Copilot para desenvolvimento em equipe?",
+        alternatives: [
+            "Apenas sincronização de código",
+            "Padronização de código, convenções consistentes e transferência de conhecimento",
+            "Somente resolução de conflitos",
+            "Apenas controle de versão",
+            "Exclusivamente revisão de código"
+        ],
+        correct: 1
+    },
+    {
+        id: 233,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode ajudar com performance de aplicações?",
+        alternatives: [
+            "Apenas medindo velocidade",
+            "Sugerindo otimizações de código, algoritmos eficientes e melhores práticas",
+            "Somente monitoramento",
+            "Apenas profiling",
+            "Exclusivamente cache"
+        ],
+        correct: 1
+    },
+    {
+        id: 234,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é o papel do Copilot na automação de tarefas repetitivas?",
+        alternatives: [
+            "Não ajuda com automação",
+            "Geração de scripts, pipelines de CI/CD e tarefas de build",
+            "Apenas execução manual",
+            "Somente documentação",
+            "Exclusivamente monitoramento"
+        ],
+        correct: 1
+    },
+    {
+        id: 235,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode auxiliar em análise de dados e machine learning?",
+        alternatives: [
+            "Apenas visualização",
+            "Sugestões para pipelines de dados, modelos ML e análises estatísticas",
+            "Somente limpeza de dados",
+            "Apenas gráficos",
+            "Exclusivamente relatórios"
+        ],
+        correct: 1
+    },
+    {
+        id: 236,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é a utilidade do Copilot para debugging?",
+        alternatives: [
+            "Apenas executar código",
+            "Sugerir pontos de breakpoint, análise de logs e identificação de problemas",
+            "Somente formatação",
+            "Apenas compilação",
+            "Exclusivamente testes unitários"
+        ],
+        correct: 1
+    },
+    {
+        id: 237,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o Copilot pode melhorar a documentação de projetos?",
+        alternatives: [
+            "Apenas copiando código",
+            "Gerando READMEs, comentários de código e documentação de APIs",
+            "Somente tradução",
+            "Apenas formatação",
+            "Exclusivamente correção ortográfica"
+        ],
+        correct: 1
+    },
+    {
+        id: 238,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Qual é o benefício do Copilot para prototipagem rápida?",
+        alternatives: [
+            "Apenas design visual",
+            "Geração rápida de código base, estruturas e funcionalidades básicas",
+            "Somente wireframes",
+            "Apenas mockups",
+            "Exclusivamente testes de conceito"
+        ],
+        correct: 1
+    },
+    {
+        id: 239,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como usar a API de produtividade do GitHub para medir impacto do Copilot?",
+        alternatives: [
+            "Apenas contagem manual",
+            "Métricas de aceitação de sugestões, tempo de desenvolvimento e qualidade do código",
+            "Somente número de commits",
+            "Apenas linhas de código",
+            "Exclusivamente bugs reportados"
+        ],
+        correct: 1
+    },
+    {
+        id: 240,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Quais são as limitações do Copilot que desenvolvedores devem conhecer?",
+        alternatives: [
+            "Não há limitações",
+            "Pode gerar código incorreto, requer validação humana e não substitui expertise",
+            "Apenas limitações de velocidade",
+            "Somente questões de custo",
+            "Exclusivamente compatibilidade"
+        ],
+        correct: 1
+    },
+
+    // Domain 6: Teste com o GitHub Copilot - adding 8 more questions
+    {
+        id: 241,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Como o Copilot pode auxiliar na criação de testes end-to-end?",
+        alternatives: [
+            "Apenas testes unitários",
+            "Geração de cenários de usuário, automação de interface e validações completas",
+            "Somente testes manuais",
+            "Apenas smoke tests",
+            "Exclusivamente testes de carga"
+        ],
+        correct: 1
+    },
+    {
+        id: 242,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Qual é o benefício do Copilot para Test-Driven Development (TDD)?",
+        alternatives: [
+            "Não suporta TDD",
+            "Geração de testes primeiro, estruturas de teste e casos de borda",
+            "Apenas execução de testes",
+            "Somente relatórios",
+            "Exclusivamente debugging"
+        ],
+        correct: 1
+    },
+    {
+        id: 243,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Como o Copilot pode melhorar testes de performance?",
+        alternatives: [
+            "Apenas medição básica",
+            "Sugestões para cenários de carga, benchmarks e análise de métricas",
+            "Somente execução",
+            "Apenas monitoramento",
+            "Exclusivamente relatórios"
+        ],
+        correct: 1
+    },
+    {
+        id: 244,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Qual é o papel do Copilot em testes de segurança?",
+        alternatives: [
+            "Não ajuda com segurança",
+            "Identificação de vulnerabilidades e sugestão de testes de penetração",
+            "Apenas auditoria",
+            "Somente compliance",
+            "Exclusivamente logs"
+        ],
+        correct: 1
+    },
+    {
+        id: 245,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Como gerar dados de teste eficazes com o Copilot?",
+        alternatives: [
+            "Apenas dados aleatórios",
+            "Geração de datasets realistas, casos extremos e dados sintéticos",
+            "Somente dados de produção",
+            "Apenas valores fixos",
+            "Exclusivamente dados históricos"
+        ],
+        correct: 1
+    },
+    {
+        id: 246,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Qual é a utilidade do Copilot para testes de acessibilidade?",
+        alternatives: [
+            "Não suporta acessibilidade",
+            "Sugestões para testes WCAG, validações de elementos e navegação por teclado",
+            "Apenas cores",
+            "Somente fontes",
+            "Exclusivamente contrast ratio"
+        ],
+        correct: 1
+    },
+    {
+        id: 247,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Como o Copilot pode auxiliar em testes de API?",
+        alternatives: [
+            "Apenas documentação",
+            "Geração de casos de teste, validação de schemas e testes de contratos",
+            "Somente execução manual",
+            "Apenas monitoramento",
+            "Exclusivamente logs"
+        ],
+        correct: 1
+    },
+    {
+        id: 248,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Qual é o benefício do Copilot para manutenção de suites de teste?",
+        alternatives: [
+            "Apenas execução",
+            "Refatoração de testes, identificação de testes redundantes e otimização",
+            "Somente relatórios",
+            "Apenas documentação",
+            "Exclusivamente debugging"
+        ],
+        correct: 1
+    },
+
+    // Domain 7: Fundamentos de privacidade e exclusões de contexto - adding 32 more questions
+    {
+        id: 249,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar exclusões em nível de repositório?",
+        alternatives: [
+            "Apenas via suporte técnico",
+            "Arquivo .copilotignore ou configurações do repositório",
+            "Somente via API",
+            "Apenas administradores globais",
+            "Exclusivamente por ticket"
+        ],
+        correct: 1
+    },
+    {
+        id: 250,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é o impacto das exclusões na performance do Copilot?",
+        alternatives: [
+            "Sempre melhora performance",
+            "Pode reduzir contexto disponível e afetar qualidade das sugestões",
+            "Não afeta performance",
+            "Apenas acelera respostas",
+            "Exclusivamente melhora segurança"
+        ],
+        correct: 1
+    },
+    {
+        id: 251,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como funciona a detecção de duplicação no GitHub Copilot?",
+        alternatives: [
+            "Apenas comparação de texto",
+            "Filtros que identificam código similar ao dos dados de treinamento",
+            "Somente hash MD5",
+            "Apenas por número de linhas",
+            "Exclusivamente por sintaxe"
+        ],
+        correct: 1
+    },
+    {
+        id: 252,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é a diferença entre exclusões de organização vs repositório?",
+        alternatives: [
+            "Não há diferença",
+            "Organização afeta todos os repositórios, repositório apenas aquele específico",
+            "Apenas nomenclatura diferente",
+            "Organização é mais restritiva",
+            "Repositório tem precedência sempre"
+        ],
+        correct: 1
+    },
+    {
+        id: 253,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como verificar se exclusões estão funcionando corretamente?",
+        alternatives: [
+            "Apenas confiar nas configurações",
+            "Testar sugestões em arquivos excluídos e verificar logs de auditoria",
+            "Somente através de suporte",
+            "Apenas por feedback visual",
+            "Exclusivamente via API"
+        ],
+        correct: 1
+    },
+    {
+        id: 254,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais tipos de arquivos podem ser excluídos do Copilot?",
+        alternatives: [
+            "Apenas código fonte",
+            "Qualquer tipo de arquivo incluindo configurações, documentos e dados",
+            "Somente arquivos de texto",
+            "Apenas arquivos binários",
+            "Exclusivamente arquivos de configuração"
+        ],
+        correct: 1
+    },
+    {
+        id: 255,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como as exclusões afetam o Copilot Chat?",
+        alternatives: [
+            "Chat não é afetado",
+            "Arquivos excluídos não são usados como contexto nas respostas do Chat",
+            "Apenas sugestões inline são afetadas",
+            "Somente para conversas longas",
+            "Exclusivamente para comandos específicos"
+        ],
+        correct: 1
+    },
+    {
+        id: 256,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é a propriedade das saídas geradas pelo Copilot?",
+        alternatives: [
+            "Sempre do GitHub",
+            "Do usuário que recebe a sugestão, sujeito aos termos de serviço",
+            "Domínio público automaticamente",
+            "Compartilhada entre todos os usuários",
+            "Exclusivamente da Microsoft"
+        ],
+        correct: 1
+    },
+    {
+        id: 257,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar políticas de privacidade em nível empresarial?",
+        alternatives: [
+            "Não é possível",
+            "Através das configurações da organização GitHub Enterprise",
+            "Apenas individualmente",
+            "Somente via contratos especiais",
+            "Exclusivamente por suporte premium"
+        ],
+        correct: 1
+    },
+    {
+        id: 258,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são as limitações das exclusões de contexto?",
+        alternatives: [
+            "Não há limitações",
+            "Podem afetar qualidade das sugestões e não garantem 100% de privacidade",
+            "Apenas limitações técnicas",
+            "Somente questões de performance",
+            "Exclusivamente problemas de configuração"
+        ],
+        correct: 1
+    },
+    {
+        id: 259,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como ativar/desativar coleta de dados de telemetria?",
+        alternatives: [
+            "Não é possível controlar",
+            "Através das configurações de conta ou organização no GitHub",
+            "Apenas via suporte",
+            "Somente para contas Enterprise",
+            "Exclusivamente por API"
+        ],
+        correct: 1
+    },
+    {
+        id: 260,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é o escopo da proteção contratual do GitHub Copilot?",
+        alternatives: [
+            "Apenas código original",
+            "Proteção contra reivindicações de IP para código gerado pelo Copilot",
+            "Somente para grandes empresas",
+            "Apenas para código público",
+            "Exclusivamente para usuários pagos"
+        ],
+        correct: 1
+    },
+    {
+        id: 261,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como resolver problemas de sugestões não aparecendo em alguns arquivos?",
+        alternatives: [
+            "Sempre é problema do IDE",
+            "Verificar exclusões configuradas, extensão ativa e conexão de rede",
+            "Apenas reiniciar o computador",
+            "Somente reinstalar extensão",
+            "Exclusivamente contatar suporte"
+        ],
+        correct: 1
+    },
+    {
+        id: 262,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais dados são compartilhados quando usando Copilot Individual?",
+        alternatives: [
+            "Todo o código do repositório",
+            "Trechos de código no contexto do prompt e metadados de uso",
+            "Apenas metadados",
+            "Nenhum dado é compartilhado",
+            "Exclusivamente dados públicos"
+        ],
+        correct: 1
+    },
+    {
+        id: 263,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar exclusões para arquivos sensíveis?",
+        alternatives: [
+            "Não é possível",
+            "Usar padrões glob em .copilotignore ou configurações de repositório",
+            "Apenas renomear arquivos",
+            "Somente mover para pastas especiais",
+            "Exclusivamente criptografar arquivos"
+        ],
+        correct: 1
+    },
+    {
+        id: 264,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é a hierarquia de aplicação de exclusões?",
+        alternatives: [
+            "Todas têm peso igual",
+            "Configurações mais restritivas prevalecem: organização > repositório > usuário",
+            "Apenas configurações locais",
+            "Usuário sempre tem precedência",
+            "Apenas configurações globais"
+        ],
+        correct: 1
+    },
+    {
+        id: 265,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como monitorar o uso do Copilot em uma organização?",
+        alternatives: [
+            "Não é possível monitorar",
+            "Através de logs de auditoria e métricas de uso organizacionais",
+            "Apenas contagem manual",
+            "Somente via faturas",
+            "Exclusivamente por relatórios de usuários"
+        ],
+        correct: 1
+    },
+    {
+        id: 266,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são as opções de retenção de dados para Copilot Business?",
+        alternatives: [
+            "Dados são mantidos indefinidamente",
+            "Diferentes períodos de retenção baseados no tipo de dado e configurações",
+            "Apenas 30 dias",
+            "Somente durante a sessão",
+            "Exclusivamente até cancelamento"
+        ],
+        correct: 1
+    },
+    {
+        id: 267,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar alertas de segurança para uso do Copilot?",
+        alternatives: [
+            "Não há alertas disponíveis",
+            "Através de webhooks e integrações com sistemas de monitoramento",
+            "Apenas via email manual",
+            "Somente logs locais",
+            "Exclusivamente por notificações push"
+        ],
+        correct: 1
+    },
+    {
+        id: 268,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é o impacto das regulamentações GDPR/LGPD no uso do Copilot?",
+        alternatives: [
+            "Não há impacto",
+            "Requer configurações específicas de privacidade e consentimento de dados",
+            "Apenas para empresas europeias",
+            "Somente para dados pessoais óbvios",
+            "Exclusivamente para setores específicos"
+        ],
+        correct: 1
+    },
+    {
+        id: 269,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como implementar Data Loss Prevention (DLP) com Copilot?",
+        alternatives: [
+            "DLP não é aplicável",
+            "Configurar exclusões baseadas em padrões sensíveis e políticas organizacionais",
+            "Apenas criptografia",
+            "Somente acesso restrito",
+            "Exclusivamente backup seguro"
+        ],
+        correct: 1
+    },
+    {
+        id: 270,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são os requisitos de compliance para usar Copilot em ambientes regulados?",
+        alternatives: [
+            "Não há requisitos especiais",
+            "Avaliação de riscos, configurações de privacidade e auditoria regular",
+            "Apenas documentação básica",
+            "Somente treinamento de usuários",
+            "Exclusivamente contratos especiais"
+        ],
+        correct: 1
+    },
+    {
+        id: 271,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como garantir que código proprietário não seja exposto através do Copilot?",
+        alternatives: [
+            "Não é possível garantir",
+            "Configurar exclusões adequadas e usar Copilot Business/Enterprise",
+            "Apenas não usar Copilot",
+            "Somente código público",
+            "Exclusivamente licenças especiais"
+        ],
+        correct: 1
+    },
+    {
+        id: 272,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é o processo para reportar problemas de privacidade relacionados ao Copilot?",
+        alternatives: [
+            "Não há processo específico",
+            "Através dos canais oficiais de suporte GitHub e relatórios de segurança",
+            "Apenas redes sociais",
+            "Somente fóruns comunitários",
+            "Exclusivamente via advogados"
+        ],
+        correct: 1
+    },
+    {
+        id: 273,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar Copilot para ambientes air-gapped ou offline?",
+        alternatives: [
+            "Copilot sempre requer internet",
+            "Configurações especiais para ambientes isolados com modelos locais",
+            "Não é possível usar offline",
+            "Apenas cache local limitado",
+            "Exclusivamente para Enterprise"
+        ],
+        correct: 1
+    },
+    {
+        id: 274,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são as melhores práticas para onboarding de equipes com questões de privacidade?",
+        alternatives: [
+            "Apenas training básico",
+            "Treinamento em privacidade, configuração de exclusões e políticas claras",
+            "Somente documentação",
+            "Apenas demonstrações",
+            "Exclusivamente auto-aprendizado"
+        ],
+        correct: 1
+    },
+    {
+        id: 275,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como avaliar riscos de segurança antes de implementar Copilot?",
+        alternatives: [
+            "Avaliar riscos não é necessário",
+            "Análise de dados sensíveis, configurações necessárias e políticas de uso",
+            "Apenas verificar compatibilidade técnica",
+            "Somente questões de custo",
+            "Exclusivamente feedback de usuários"
+        ],
+        correct: 1
+    },
+    {
+        id: 276,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é o impacto das exclusões na colaboração em equipe?",
+        alternatives: [
+            "Não afeta colaboração",
+            "Pode reduzir sugestões contextuais mas melhora segurança e compliance",
+            "Apenas melhora colaboração",
+            "Somente afeta performance",
+            "Exclusivamente questões técnicas"
+        ],
+        correct: 1
+    },
+    {
+        id: 277,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como configurar diferentes níveis de acesso ao Copilot na organização?",
+        alternatives: [
+            "Todos têm mesmo acesso",
+            "Através de políticas de organização e configurações por equipe/repositório",
+            "Apenas admin global pode configurar",
+            "Somente configurações individuais",
+            "Exclusivamente via contratos"
+        ],
+        correct: 1
+    },
+    {
+        id: 278,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são os indicadores de que exclusões precisam ser ajustadas?",
+        alternatives: [
+            "Nunca precisam ajustes",
+            "Sugestões inadequadas, exposição de dados sensíveis ou impacto na produtividade",
+            "Apenas feedback negativo",
+            "Somente questões de performance",
+            "Exclusivamente por auditoria externa"
+        ],
+        correct: 1
+    },
+    {
+        id: 279,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Como integrar Copilot com sistemas de gestão de identidade corporativa?",
+        alternatives: [
+            "Não é possível integrar",
+            "Através de SSO, SAML e configurações de organização Enterprise",
+            "Apenas autenticação básica",
+            "Somente para grandes empresas",
+            "Exclusivamente via API custom"
+        ],
+        correct: 1
+    },
+    {
+        id: 280,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Qual é a estratégia recomendada para migração gradual para Copilot com foco em privacidade?",
+        alternatives: [
+            "Implementação imediata para todos",
+            "Implementação por fases com grupos piloto, configurações progressivas e monitoramento",
+            "Apenas para desenvolvedores senior",
+            "Somente projetos não críticos",
+            "Exclusivamente ambiente de desenvolvimento"
+        ],
+        correct: 1
     }
 ];

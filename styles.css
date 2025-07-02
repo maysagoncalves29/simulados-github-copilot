@@ -457,3 +457,61 @@ header h1 {
         font-size: 1rem;
     }
 }
+
+/* Mode selection styles */
+.mode-select-box {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mode-select-box h3 {
+    color: #495057;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.mode-radio-buttons label {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mode-radio-buttons label:hover {
+    border-color: #667eea;
+    background-color: #f8f9ff;
+}
+
+.mode-radio-buttons input[type="radio"] {
+    margin-right: 10px;
+}
+
+.mode-radio-buttons input[type="radio"]:checked + strong {
+    color: #667eea;
+}
+
+/* Feedback area styles */
+.feedback-area {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.feedback-correct {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.feedback-incorrect {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}

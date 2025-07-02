@@ -6,23 +6,25 @@ Uma aplicação web completa para simulados de preparação para a certificaçã
 
 ## 📋 Características
 
-- **180 questões** cobrindo todos os 7 domínios da certificação GH-300
+- **280 questões** cobrindo todos os 7 domínios da certificação GH-300
 - **60 questões aleatórias** por simulado para máxima variedade  
 - **Interface responsiva** e intuitiva
-- **Critério de aprovação**: 70% (39 de 60 questões corretas)
+- **Critério de aprovação**: 80% (48 de 60 questões corretas)
+- **Duas modalidades**: Modo Prática (feedback imediato) e Modo Exame (feedback no final)
+- **Questões com múltiplas respostas corretas** para maior realismo
 - **Revisão detalhada** das respostas após o simulado
 - **Sem frameworks**: HTML, CSS e JavaScript puro
 - **Suporte a teclado**: teclas 1-5 para selecionar alternativas, setas para navegar
 
 ## 🎯 Domínios Cobertos
 
-1. **IA Responsável** (7% - ~13 questões)
-2. **Planos e recursos do GitHub Copilot** (31% - ~56 questões)  
-3. **Como o GitHub Copilot funciona e lida com dados** (15% - ~27 questões)
-4. **Elaboração de Prompts e Engenharia de Prompts** (9% - ~16 questões)
-5. **Casos de uso de IA para desenvolvedores** (14% - ~25 questões)
-6. **Teste com o GitHub Copilot** (9% - ~16 questões)
-7. **Fundamentos de privacidade e exclusões de contexto** (15% - ~27 questões)
+1. **IA Responsável** (7% - ~20 questões)
+2. **Planos e recursos do GitHub Copilot** (31% - ~70 questões)  
+3. **Como o GitHub Copilot funciona e lida com dados** (15% - ~40 questões)
+4. **Elaboração de Prompts e Engenharia de Prompts** (9% - ~25 questões)
+5. **Casos de uso de IA para desenvolvedores** (14% - ~40 questões)
+6. **Teste com o GitHub Copilot** (9% - ~25 questões)
+7. **Fundamentos de privacidade e exclusões de contexto** (15% - ~60 questões)
 
 ## 🚀 Como Usar
 
