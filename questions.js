@@ -2354,5 +2354,98 @@ const questionsDatabase = [
             "Exclusivamente auto-aprendizado"
         ],
         correct: 1
+    },
+
+    // Sample questions with multiple correct answers (some questions have 2 correct alternatives)
+    {
+        id: 181,
+        domain: "Domínio 2: Planos e recursos do GitHub Copilot",
+        question: "Quais são características do GitHub Copilot Business? (Selecione as opções corretas)",
+        alternatives: [
+            "Exclusões de dados organizacionais",
+            "Apenas suporte via chat",
+            "Logs de auditoria organizacionais",
+            "Preço mais barato que Individual",
+            "Funciona apenas em VS Code"
+        ],
+        correct: [0, 2] // Multiple correct answers: exclusões de dados e logs de auditoria
+    },
+    {
+        id: 182,
+        domain: "Domínio 1: IA Responsável",
+        question: "Quais são princípios fundamentais da IA responsável? (Selecione as opções corretas)",
+        alternatives: [
+            "Transparência nas decisões",
+            "Maximizar lucros a qualquer custo",
+            "Equidade e não discriminação",
+            "Velocidade sobre precisão",
+            "Evitar qualquer supervisão humana"
+        ],
+        correct: [0, 2] // Transparência e equidade
+    },
+    {
+        id: 183,
+        domain: "Domínio 3: Como o GitHub Copilot funciona e lida com dados",
+        question: "Que tipos de dados o GitHub Copilot considera para gerar sugestões?",
+        alternatives: [
+            "Contexto do código atual",
+            "Apenas código público no GitHub",
+            "Comentários e nomes de variáveis",
+            "Exclusivamente dados de performance",
+            "Somente dados de usuários pagos"
+        ],
+        correct: [0, 2] // Contexto do código e comentários/nomes de variáveis
+    },
+    {
+        id: 184,
+        domain: "Domínio 4: Elaboração de Prompts e Engenharia de Prompts",
+        question: "Qual é a melhor estratégia para criar prompts eficazes no GitHub Copilot?",
+        alternatives: [
+            "Usar comentários descritivos e específicos",
+            "Apenas escrever código sem contexto",
+            "Fornecer exemplos relevantes no código",
+            "Evitar qualquer documentação",
+            "Usar apenas palavras-chave técnicas"
+        ],
+        correct: [0, 2] // Comentários descritivos e exemplos relevantes
+    },
+    {
+        id: 185,
+        domain: "Domínio 5: Casos de uso de IA para desenvolvedores",
+        question: "Como o GitHub Copilot pode melhorar a produtividade em desenvolvimento?",
+        alternatives: [
+            "Automatizando tarefas repetitivas",
+            "Substituindo completamente o desenvolvedor",
+            "Acelerando a escrita de código boilerplate",
+            "Eliminando a necessidade de testes",
+            "Removendo a necessidade de documentação"
+        ],
+        correct: [0, 2] // Automatização e código boilerplate
+    },
+    {
+        id: 186,
+        domain: "Domínio 6: Teste com o GitHub Copilot",
+        question: "Que tipos de testes o GitHub Copilot pode ajudar a gerar?",
+        alternatives: [
+            "Testes unitários",
+            "Apenas testes manuais",
+            "Testes de integração",
+            "Exclusivamente testes de UI",
+            "Somente testes de performance"
+        ],
+        correct: [0, 2] // Testes unitários e de integração
+    },
+    {
+        id: 187,
+        domain: "Domínio 7: Fundamentos de privacidade e exclusões de contexto",
+        question: "Quais são opções de configuração de privacidade no GitHub Copilot?",
+        alternatives: [
+            "Exclusões de arquivos específicos",
+            "Compartilhamento obrigatório de todo código",
+            "Configurações de organização",
+            "Bloqueio total sem configuração",
+            "Apenas configurações globais"
+        ],
+        correct: [0, 2] // Exclusões de arquivos e configurações de organização
     }
 ];

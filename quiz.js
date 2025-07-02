@@ -6,6 +6,7 @@ class GitHubCopilotQuiz {
         this.currentQuestionIndex = 0;
         this.userAnswers = [];
         this.isQuizActive = false;
+        this.quizMode = 'practice'; // 'practice' or 'exam'
         this.startTime = null;
         this.endTime = null;
         
@@ -75,6 +76,10 @@ class GitHubCopilotQuiz {
     }
 
     startQuiz() {
+        // Captura modo selecionado
+        const selectedMode = document.querySelector('input[name="quiz-mode"]:checked').value;
+        this.quizMode = selectedMode;
+        
         // Captura domínios selecionados
         const checkedBoxes = document.querySelectorAll('.domain-checkbox:checked');
         const selectedDomains = Array.from(checkedBoxes).map(cb => cb.value);
@@ -146,6 +151,11 @@ class GitHubCopilotQuiz {
     displayCurrentQuestion() {
         const question = this.selectedQuestions[this.currentQuestionIndex];
         
+        // Clear previous feedback
+        const feedbackArea = document.getElementById('feedback-area');
+        feedbackArea.style.display = 'none';
+        feedbackArea.innerHTML = '';
+        
         // Update question counter
         document.getElementById('question-counter').textContent = 
             `Questão ${this.currentQuestionIndex + 1} de 60`;
@@ -205,7 +215,55 @@ class GitHubCopilotQuiz {
             }
         });
         
+        // Show immediate feedback in practice mode
+        if (this.quizMode === 'practice') {
+            this.showImmediateFeedback(alternativeIndex);
+        }
+        
         this.updateNavigationButtons();
+    }
+
+    showImmediateFeedback(selectedIndex) {
+        const question = this.selectedQuestions[this.currentQuestionIndex];
+        const feedbackArea = document.getElementById('feedback-area');
+        const isCorrect = this.isCorrectAnswer(question, selectedIndex);
+        
+        if (isCorrect) {
+            feedbackArea.innerHTML = `
+                <div class="feedback-correct">
+                    <strong>✅ Correto!</strong>
+                </div>
+            `;
+        } else {
+            const correctAnswers = this.getCorrectAnswers(question);
+            const correctTexts = correctAnswers.map(index => 
+                `${String.fromCharCode(65 + index)}) ${question.alternatives[index]}`
+            ).join('<br>');
+            
+            feedbackArea.innerHTML = `
+                <div class="feedback-incorrect">
+                    <strong>❌ Incorreto!</strong><br>
+                    <strong>Resposta(s) correta(s):</strong><br>
+                    ${correctTexts}
+                </div>
+            `;
+        }
+        
+        feedbackArea.style.display = 'block';
+    }
+
+    isCorrectAnswer(question, selectedIndex) {
+        if (Array.isArray(question.correct)) {
+            return question.correct.includes(selectedIndex);
+        }
+        return question.correct === selectedIndex;
+    }
+
+    getCorrectAnswers(question) {
+        if (Array.isArray(question.correct)) {
+            return question.correct;
+        }
+        return [question.correct];
     }
 
     updateNavigationButtons() {
@@ -273,7 +331,7 @@ class GitHubCopilotQuiz {
         let correctAnswers = 0;
         
         this.selectedQuestions.forEach((question, index) => {
-            if (this.userAnswers[index] === question.correct) {
+            if (this.isCorrectAnswer(question, this.userAnswers[index])) {
                 correctAnswers++;
             }
         });
@@ -282,7 +340,7 @@ class GitHubCopilotQuiz {
             correctAnswers,
             totalQuestions: this.selectedQuestions.length,
             percentage: Math.round((correctAnswers / this.selectedQuestions.length) * 100),
-            passed: correctAnswers >= 42,            duration: this.calculateDuration()
+            passed: correctAnswers >= 48,            duration: this.calculateDuration()
         };
     }
 
@@ -354,7 +412,7 @@ class GitHubCopilotQuiz {
         
         this.selectedQuestions.forEach((question, index) => {
             const userAnswer = this.userAnswers[index];
-            const isCorrect = userAnswer === question.correct;
+            const isCorrect = this.isCorrectAnswer(question, userAnswer);
             const correctClass = isCorrect ? 'correct' : 'incorrect';
             
             const questionDiv = document.createElement('div');
@@ -364,7 +422,10 @@ class GitHubCopilotQuiz {
                 `${String.fromCharCode(65 + userAnswer)}) ${question.alternatives[userAnswer]}` : 
                 'Não respondida';
             
-            const correctAnswerText = `${String.fromCharCode(65 + question.correct)}) ${question.alternatives[question.correct]}`;
+            const correctAnswers = this.getCorrectAnswers(question);
+            const correctAnswerTexts = correctAnswers.map(correctIndex => 
+                `${String.fromCharCode(65 + correctIndex)}) ${question.alternatives[correctIndex]}`
+            ).join('<br>');
             
             questionDiv.innerHTML = `
                 <div class="review-question-number">
@@ -378,7 +439,7 @@ class GitHubCopilotQuiz {
                 </div>
                 ${!isCorrect ? `
                     <div class="review-answer correct-answer">
-                        <strong>Resposta correta:</strong> ${correctAnswerText}
+                        <strong>Resposta(s) correta(s):</strong><br>${correctAnswerTexts}
                     </div>
                 ` : ''}
             `;
@@ -412,7 +473,7 @@ class GitHubCopilotQuiz {
             }
             
             domainStats[domain].total++;
-            if (this.userAnswers[index] === question.correct) {
+            if (this.isCorrectAnswer(question, this.userAnswers[index])) {
                 domainStats[domain].correct++;
             }
         });
